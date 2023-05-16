@@ -1,0 +1,198 @@
+
+QUESTION:
+
+
+1- How we can access HTML elements using DOM in javascript?
+
+
+ANSWER:
+
+To access HTML elements using the Document Object Model (DOM) in JavaScript, you can
+use various methods and properties provided by the DOM API. Here are some common 
+approaches:
+
+
+1:Accessing elements by ID:
+
+      const element = document.getElementById('elementId');
+
+
+2:Accessing elements by class name:
+
+      const elements = document.getElementsByClassName('className');
+
+
+3:Accessing elements by tag name:
+
+      const elements = document.getElementsByTagName('tagName');
+
+
+4:Accessing elements using CSS selectors:
+
+      const element = document.querySelector('selector');
+      const elements = document.querySelectorAll('selector');
+
+
+5:Accessing elements based on their relationship to other elements:
+
+      const parentElement = document.getElementById('parentId');
+      const childElement = parentElement.querySelector('selector');
+      const siblingElement = element.nextElementSibling;
+
+
+6:Accessing form elements using their name or ID:
+
+      const formElement = document.forms['formName']; // By form name
+      const inputElement = formElement.elements['inputName']; // By input name
+
+
+
+Once you have accessed an element, you can manipulate its properties, styles, or content 
+using JavaScript. For example:
+
+
+      element.textContent = 'New content';
+      element.style.color = 'red';
+      element.classList.add('newClass');
+
+
+These are just some of the ways to access and manipulate HTML elements using the DOM in 
+JavaScript. The DOM API provides a rich set of methods and properties to interact with the 
+HTML structure, allowing you to dynamically update and modify web pages.
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+QUESTION:
+
+2- What are the activities that we can perform using DOM?
+
+ANSWER:
+
+Using the Document Object Model (DOM) in JavaScript, you can perform a wide range of 
+activities to manipulate and interact with web pages. Here are some common activities you 
+can perform using the DOM:
+
+1:Accessing and modifying elements:
+
+    ou can access HTML elements by their IDs, classes, tags, or using CSS selectors. 
+Once you have a reference to an element, you can modify its properties, attributes, styles, or content.
+
+Example:you can change the text of an element, update its style, add or remove CSS classes, change attribute values, etc.
+
+2:Creating and removing elements:
+
+    You can dynamically create new HTML elements using JavaScript and add them to the DOM. Similarly, 
+you can remove existing elements from the DOM. This allows you to add or remove content 
+dynamically based on user interactions or other events.
+
+3:Modifying element structure:
+
+     You can manipulate the structure of the HTML document by appending, inserting, or removing elements within the DOM tree.
+
+Example:you can append a new element as a child of another element, insert an element before or after another
+ element, or remove elements from the DOM tree.
+
+4:Handling events:
+
+     You can register event listeners on elements to respond to user interactions or other events. 
+This allows you to execute JavaScript code when events like clicks, key presses, mouse movements,
+ form submissions, etc., occur on specific elements.
+
+
+5:Traversing the DOM tree:
+
+     The DOM provides methods to traverse the DOM tree and navigate between elements. 
+You can access parent, child, or sibling elements, find elements based on their relationships,
+or iterate over collections of elements.
+
+6:Modifying element styles:
+
+     you can change the styles of HTML elements dynamically. This includes modifying CSS properties 
+like color, font size, background, visibility, etc., to update the visual presentation of elements on the page.
+
+7:Working with forms:
+
+      The DOM allows you to interact with HTML forms, access form elements, retrieve or set their values, 
+validate form inputs, submit forms programmatically, and handle form submission events.
+
+8:Manipulating attributes and data:
+
+      You can access and modify element attributes, such as src, href, data-* attributes, etc. 
+This allows you to dynamically change URLs, data values, or other element-specific information.
+
+
+These activities represent just a subset of the capabilities provided by the DOM. 
+The DOM API offers a comprehensive set of methods, properties, and events to interact with HTML elements 
+and create dynamic, interactive web pages using JavaScript.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+QUESTION:
+
+3- What are the event-listners in DOM?
+
+ANSWERS:
+
+
+In the Document Object Model (DOM), event listeners are functions that are attached to 
+HTML elements and executed when specific events occur. They allow you to respond to user 
+interactions or other events happening on the web page. Event listeners are an essential part 
+of creating interactive and dynamic web applications. Here are some commonly used event listeners in the DOM:
+
+
+
+1:click: 
+        Fires when the element is clicked.
+
+2:keydown/keyup/keypress: 
+        Fire when a key is pressed down, released, or pressed, respectively, while the element has focus.
+
+3:mouseover/mouseout: 
+        Fire when the mouse pointer enters or leaves the element's boundaries.
+
+4:mouseenter/mouseleave: 
+        Similar to mouseover and mouseout, but these events do not bubble. They are only triggered 
+        when entering or leaving the boundaries of the specific element.
+
+5:submit: 
+        Fires when a form is submitted.
+
+6:change: 
+        Fires when the value of an input element, select element, or textarea element is changed.
+
+7:focus/blur: 
+        Fire when an element gains or loses focus, respectively.
+
+8:scroll: 
+        Fires when an element is scrolled.
+
+9:load: 
+        Fires when a resource, such as an image or a script, has finished loading.
+
+10:resize: 
+       Fires when the browser window or an element is resized.
+
+To attach an event listener to an element, you can use the addEventListener() method. Here's an example:
+
+
+          const button = document.getElementById('myButton');
+
+          button.addEventListener('click', function(event) {
+             // Event handling code
+          });
+
+
+In this example, when the button with the ID 'myButton' is clicked, the event listener function 
+is executed. The event object (event) provides additional information about the event, 
+such as the target element, event type, and event-specific details.
+
+
+Event listeners can also be attached to multiple elements using selectors or by iterating over 
+a collection of elements. Additionally, you can remove event listeners using the 
+removeEventListener() method.
+
+Event listeners enable you to create interactive web applications by executing JavaScript code 
+in response to user actions or other events occurring on the page. They provide a powerful 
+way to enhance user experience and add functionality to your web application.
